@@ -11,6 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600&family=Poppins:ital,wght@0,500;1,200&family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <title>Gaming Territory</title>
 </head>
 
@@ -21,16 +23,23 @@
             GamingTerritory
         </h1>
         <ul class="nav-links">
-            <li><a href="#"></a>Home</li>
-            <li><a href="#"></a>About</li>
-            <li><a href="#"></a>Services</li>
-            <li><a href="#"></a>Contact</li>
+            <li class="active"><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Contact">Contact</a></li>
         </ul>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+        <script type="text/javascript">
+            $(document).on('click', 'ul li', function(){
+                $(this).addClass('active').siblings().removeClass('active')
+            })
+        </script>
 
     </nav>
 
 
-    <header>
+    <header id="Home">
         <div class="header-content">
             <h1>Your Gaming Plug</h1>
 
@@ -40,10 +49,11 @@
                 - Lisa Su.</p>
 
         </div>
+
     </header>
 
     <!-- About -->
-    <section class="About">
+    <section id="About">
         <div class="title">
             <h1>Who are we?</h1>
         </div>
@@ -57,7 +67,7 @@
     </section>
 
     <!-- Services -->
-    <div class="services">
+    <div class="services" id="Services">
 
         <div class="title">
             <h1>Games</h1>
@@ -96,7 +106,7 @@
     </div>
 
     <!-- contact us -->
-    <div class="contact">
+    <div class="contact" id="Contact">
         <div class="title">
             <h1>How to find us?</h1>
         </div>
