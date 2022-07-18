@@ -45,6 +45,11 @@ ul li.active a{
     
 }
 
+.nav-links:hover{
+    transform: scale(1.1);
+    transition: all ease 500ms;
+}
+
 header {
     width: 100vw;
     height: 100vh;
